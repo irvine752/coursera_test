@@ -64,4 +64,21 @@ for (var i = 0; i < names.length; i++) {
   }
 }
 
+console.log("");
+console.log("Testing Map:");
+
+const nameOutput = names.map( name => parseOut(name));
+console.log(nameOutput);
+
 })();
+
+function parseOut(name){ 
+
+ var firstLetter = name.charAt(0).toLowerCase();
+
+ if (firstLetter === 'j') {
+    return byeSpeaker.speakSimple(name);
+  } else {
+    return helloSpeaker.speakSimple(name);
+  }
+}
