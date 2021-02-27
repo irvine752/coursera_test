@@ -70,6 +70,7 @@ console.log("Testing Map:");
 const nameOutput = names.map( name => parseOut(name));
 console.log(nameOutput);
 
+
 })();
 
 function parseOut(name){ 
@@ -82,3 +83,9 @@ function parseOut(name){
     return helloSpeaker.speakSimple(name);
   }
 }
+
+var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
+var result = names.reduce(byeSpeaker.speakSimple);
+console.log(result);
+
+
