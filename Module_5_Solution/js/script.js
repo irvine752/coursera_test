@@ -129,8 +129,11 @@ function buildAndShowAboutHTML () {
       for (var i = 0; i < starItems.length; i++) {
         
         finalHtml = insertProperty(finalHtml,"starIcon", starItems[i]);
+        console.log(i);
+        console.log(finalHtml);
       }
   
+      console.log("final");
       console.log(finalHtml);
 
       insertHtml("#main-content", finalHtml);
