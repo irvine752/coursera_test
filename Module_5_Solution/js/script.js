@@ -120,21 +120,16 @@ function buildAndShowAboutHTML () {
           starItems[i] = "fa fa-star-o"
         }
       }
-
     
       var finalHtml = aboutHtml;
 
       for (var i = 0; i < starItems.length; i++) {        
         var insertRating = starItems[i];
         finalHtml = insertProperty(finalHtml,"starIcon"+i, insertRating);
-        console.log(i);
-        console.log(finalHtml);
       }
 
       finalHtml += "<h2>" + starCount  + " Star Rating </h2>";
   
-      console.log("final");
-      console.log(finalHtml);
 
       insertHtml("#main-content", finalHtml);
     },

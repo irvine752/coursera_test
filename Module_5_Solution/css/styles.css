@@ -113,7 +113,6 @@ body {
 /* END FOOTER */
 
 
-
 /* HOME PAGE */
 .container .jumbotron {
   box-shadow: 0 0 50px #3F0C1F;
@@ -232,21 +231,11 @@ h3.menu-item-title {
 
 
 /* custom styling for specific icons */
-.fa-fish {
-  color: salmon;
+.fa {
+  color: white;
+  marin: 10dp;
 }
 
-.fa-frog {
-  color: green;
-}
-
-.fa-user-ninja.vanished {
-  opacity: 0.0;
-}
-
-.fa-facebook {
-  color: rgb(59, 91, 152);
-}
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
