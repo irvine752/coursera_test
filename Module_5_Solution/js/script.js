@@ -14,6 +14,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 var dc = {};
 
 var homeHtmlUrl = "snippets/home-snippet.html";
+var aboutHtmlUrl = "snippets/about-snippet.html";
 var allCategoriesUrl =
   "https://davids-restaurant.herokuapp.com/categories.json";
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
@@ -88,6 +89,61 @@ $ajaxUtils.sendGetRequest(
 });
 // *** finish **
 
+function createRandomNumber () {
+  // create a random (from 1 inclusively to 5)
+  var randomNumber = Math.floor(Math.random() * 5) + 1;
+
+  // return the random number
+  return randomNumber;
+}
+
+
+function buildAndShowAboutHTML () {
+   // Load about snippet page
+  $ajaxUtils.sendGetRequest(
+    aboutHtmlUrl,
+    function (aboutHtml) {
+
+      console.log(aboutHtml);
+
+      var randomFilledStars = createRandomNumber();
+
+      console.log(randomFilledStars);
+
+      var starItems = new Array(5);
+
+      // Loop over stars
+      for (var i = 0; i < 5; i++) {
+        if (randomFilledStars > 0) {
+          starItems[i] = "fa fa-star"
+          randomFilledStars = randomFilledStars - 1;
+        } else {
+          starItems[i] = "fa fa-star-o"
+        }
+      }
+
+          
+      var finalHtml = aboutHtml;
+      finalHtml += "<section class='row'>";
+
+      for (var i = 0; i < starItems.length; i++) {
+        
+        // Insert star item values
+        var html = finalHtml;
+        
+        html = insertProperty(html,"starIcon", starItems[i]);
+
+        finalHtml += html;
+      }
+
+      finalHtml += "</section>";
+
+
+      insertHtml("#main-content", finalHtml);
+    },
+    false);
+}
+
 
 // Builds HTML for the home page based on categories array
 // returned from the server.
@@ -142,6 +198,14 @@ function chooseRandomCategory (categories) {
   // return category object with that randomArrayIndex
   return categories[randomArrayIndex];
 }
+
+// Load the about view
+dc.loadAboutMenu = function () {
+  showLoading("#main-content");
+  $ajaxUtils.sendGetRequest(
+    aboutHtmlUrl,
+    buildAndShowAboutHTML);
+};
 
 
 // Load the menu categories view

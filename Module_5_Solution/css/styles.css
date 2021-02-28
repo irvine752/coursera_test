@@ -227,8 +227,26 @@ h3.menu-item-title {
   font-size: .9em;
   font-style: italic;
 }
+
 /* END SINGLE CATEGORY PAGE */
 
+
+/* custom styling for specific icons */
+.fa-fish {
+  color: salmon;
+}
+
+.fa-frog {
+  color: green;
+}
+
+.fa-user-ninja.vanished {
+  opacity: 0.0;
+}
+
+.fa-facebook {
+  color: rgb(59, 91, 152);
+}
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
@@ -343,7 +361,15 @@ h3.menu-item-title {
   .menu-item-description {
     text-align: center;;
   }
+
+
+    <!-- custom styling for all icons -->
+    i.fas,
+    i.fab {
+      border: 1px solid red;
+    }
 }
+
 
 
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
