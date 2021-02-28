@@ -101,15 +101,9 @@ function createRandomNumber () {
 function buildAndShowAboutHTML () {
    // Load about snippet page
 
-  console.log("Check4");
-
   $ajaxUtils.sendGetRequest(
     aboutHtmlUrl,
     function (aboutHtml) {
-
-      console.log("Check5");
-
-      console.log(aboutHtml);
 
       var randomFilledStars = createRandomNumber();
 
@@ -127,6 +121,8 @@ function buildAndShowAboutHTML () {
         }
       }
 
+      console.log(starItems);
+
           
       var finalHtml = aboutHtml;
       finalHtml += "<section class='row'>";
@@ -142,6 +138,8 @@ function buildAndShowAboutHTML () {
       }
 
       finalHtml += "</section>";
+
+       console.log(finalHtml);
 
 
       insertHtml("#main-content", finalHtml);
