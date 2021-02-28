@@ -206,9 +206,9 @@ function chooseRandomCategory (categories) {
 
 // Load the about view
 dc.loadAboutMenu = function () {
-  consoleLog("Check1")
+  console.log("Check1")
   showLoading("#main-content");
-  consoleLog("Check2")
+  console.log("Check2")
   $ajaxUtils.sendGetRequest(
     aboutHtmlUrl,
     buildAndShowAboutHTML);
