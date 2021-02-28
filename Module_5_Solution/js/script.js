@@ -131,7 +131,7 @@ function buildAndShowAboutHTML () {
         console.log(finalHtml);
       }
 
-      finalHtml += "<h2>" + starCount  + " Rating </h2>";
+      finalHtml += "<h2>" + starCount  + " Star Rating </h2>";
   
       console.log("final");
       console.log(finalHtml);
