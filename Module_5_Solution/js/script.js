@@ -100,9 +100,14 @@ function createRandomNumber () {
 
 function buildAndShowAboutHTML () {
    // Load about snippet page
+
+  console.log("Check4");
+
   $ajaxUtils.sendGetRequest(
     aboutHtmlUrl,
     function (aboutHtml) {
+
+      console.log("Check5");
 
       console.log(aboutHtml);
 
@@ -201,7 +206,9 @@ function chooseRandomCategory (categories) {
 
 // Load the about view
 dc.loadAboutMenu = function () {
+  consoleLog("Check1")
   showLoading("#main-content");
+  consoleLog("Check2")
   $ajaxUtils.sendGetRequest(
     aboutHtmlUrl,
     buildAndShowAboutHTML);
