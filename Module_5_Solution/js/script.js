@@ -125,22 +125,13 @@ function buildAndShowAboutHTML () {
 
           
       var finalHtml = aboutHtml;
-      finalHtml += "<section class='row'>";
 
       for (var i = 0; i < starItems.length; i++) {
         
-        // Insert star item values
-        var html = finalHtml;
-        
-        html = insertProperty(html,"starIcon", starItems[i]);
-
-        finalHtml += html;
+        finalHtml = insertProperty(finalHtml,"starIcon", starItems[i]);
       }
-
-      finalHtml += "</section>";
-
-       console.log(finalHtml);
-
+  
+      console.log(finalHtml);
 
       insertHtml("#main-content", finalHtml);
     },
