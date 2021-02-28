@@ -109,8 +109,6 @@ function buildAndShowAboutHTML () {
 
       var starCount = randomFilledStars
 
-      console.log(randomFilledStars);
-
       var starItems = new Array(5);
 
       // Loop over stars
@@ -123,13 +121,12 @@ function buildAndShowAboutHTML () {
         }
       }
 
-      console.log(starItems);
-      
+    
       var finalHtml = aboutHtml;
 
       for (var i = 0; i < starItems.length; i++) {        
-        var insertRating = "'" + starItems[i] + "'";
-        finalHtml = insertProperty(finalHtml,"starIcon", insertRating);
+        var insertRating = starItems[i];
+        finalHtml = insertProperty(finalHtml,"starIcon"+i, insertRating);
         console.log(i);
         console.log(finalHtml);
       }
