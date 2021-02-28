@@ -117,7 +117,7 @@ function buildAndShowAboutHTML () {
           starItems[i] = "fa fa-star"
           randomFilledStars = randomFilledStars - 1;
         } else {
-          starItems[i] = "fa fa-star-o"
+          starItems[i] = "far fa-star-o"
         }
       }
     
@@ -129,6 +129,8 @@ function buildAndShowAboutHTML () {
       }
 
       finalHtml += "<h2>" + starCount  + " Star Rating </h2>";
+
+      console.log(finalHtml);
   
 
       insertHtml("#main-content", finalHtml);

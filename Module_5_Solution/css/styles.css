@@ -236,6 +236,11 @@ h3.menu-item-title {
   marin: 10dp;
 }
 
+.fa-star-o {
+  color: white;
+  marin: 10dp;
+}
+
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
