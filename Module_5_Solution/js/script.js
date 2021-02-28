@@ -117,7 +117,7 @@ function buildAndShowAboutHTML () {
           starItems[i] = "fa fa-star"
           randomFilledStars = randomFilledStars - 1;
         } else {
-          starItems[i] = "far fa-star-o"
+          starItems[i] = "fa fa-star-o"
         }
       }
     
