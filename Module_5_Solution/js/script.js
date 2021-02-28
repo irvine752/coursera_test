@@ -107,6 +107,8 @@ function buildAndShowAboutHTML () {
 
       var randomFilledStars = createRandomNumber();
 
+      var starCount = randomFilledStars
+
       console.log(randomFilledStars);
 
       var starItems = new Array(5);
@@ -122,18 +124,17 @@ function buildAndShowAboutHTML () {
       }
 
       console.log(starItems);
-
-          
+      
       var finalHtml = aboutHtml;
 
-      for (var i = 0; i < starItems.length; i++) {
-        
-        finalHtml = insertProperty(finalHtml,"starIcon", starItems[i]);
+      for (var i = 0; i < starItems.length; i++) {        
+        var insertRating = "'" + starItems[i] + "'";
+        finalHtml = insertProperty(finalHtml,"starIcon", insertRating);
         console.log(i);
         console.log(finalHtml);
       }
 
-      finalHtml += "<h2>" + randomFilledStars  + " Rating </h2>";
+      finalHtml += "<h2>" + starCount  + " Rating </h2>";
   
       console.log("final");
       console.log(finalHtml);
