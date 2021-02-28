@@ -132,6 +132,8 @@ function buildAndShowAboutHTML () {
         console.log(i);
         console.log(finalHtml);
       }
+
+      finalHtml += "<h2>" + randomFilledStars  + " Rating </h2>";
   
       console.log("final");
       console.log(finalHtml);
@@ -153,7 +155,7 @@ function buildAndShowHomeHTML (categories) {
 
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
-      // variable's name implies it expects.
+      // variable's name implies it expects. 
       // var chosenCategoryShortName = ....
       var chosenCategoryShortName = chooseRandomCategory(categories).short_name;
 
