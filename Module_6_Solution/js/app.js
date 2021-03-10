@@ -11,16 +11,19 @@
     $scope.messageToDisplay = "";
     $scope.processingComplete = false;
 
+
     $scope.checkInput = function () {
       if ($scope.lunchMenuItems.trim().length === 0) {
-         $scope.prefStyle = {
+
+         $scope.myObj = {
           "color" : "red",
           "border-color": "red"
-        }
+         }
         $scope.emptyInput = true;
+        
       } else {
 
-        $scope.prefStyle = {
+        $scope.myObj = {
           "color" : "green",
           "border-color": "green"
         }
@@ -35,8 +38,6 @@
             menuItems.splice(i, 1)
           }
         }
-
-         console.log(menuItems);
         
         if (menuItems.length > 3) {
           $scope.messageToDisplay = "Too much!";
